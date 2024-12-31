@@ -68,8 +68,8 @@
         function validateLoin() {
             let u = document.getElementById('u').value;
             let p = document.getElementById('p').value;
-            let decryptedUsername = decodeBase64(ee);
-            let decryptedPassword = decodeBase64(eed);
+            let decryptedUsername = de4(ee);
+            let decryptedPassword = de4(eed);
 
             if (u === decryptedUsername && p === decryptedPassword) {
                 document.getElementById('m').style.display = 'block';
@@ -78,8 +78,8 @@
     function validateLogin() {
             let u = document.getElementById('u').value;
             let p = document.getElementById('p').value;
-            let decryptedUsername = decodeBase64(eea);
-            let decryptedPassword = decodeBase64(eesd);
+            let decryptedUsername = de4(eea);
+            let decryptedPassword = de4(eesd);
             de4(decryptedPassword)
             andiua()
             if (u === decryptedUsername && p === decryptedPassword) {
