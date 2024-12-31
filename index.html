@@ -1,41 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
     <style>
-        body{background:#222;color:#ddd;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;font-family:sans-serif}
-        .c{background:#333;padding:20px;border-radius:10px;box-shadow:0 0 10px #000}
-        .c input{margin:10px 0;padding:10px;width:100%;border:none;border-radius:5px}
-        .c button{padding:10px;background:#555;color:#ddd;border:none;border-radius:5px;cursor:pointer}
-        .c button:hover{background:#666}
-        .msg{margin-top:10px;font-size:14px;color:#0f0;display:none}
+        body {
+            background: #222;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .c {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #000;
+            width: 300px;
+        }
+        .c input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+        .c button {
+            padding: 10px;
+            background: #555;
+            color: #ddd;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .c button:hover {
+            background: #666;
+        }
+        .msg {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #0f0;
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="c">
         <input id="u" type="text" placeholder="Username">
         <input id="p" type="password" placeholder="Password">
-        <button onclick="a()">Login</button>
+        <button onclick="validateLogin()">Login</button>
         <div class="msg" id="m">Congratulations, you cracked it!</div>
     </div>
     <script>
-        function a(){
-            let tkn = "UNSIUDNUINUSNDGES498D7GSDGDNGUSBNDGMEISDGSG989S4SMIUQWDSG4S8DG84E84SC4GSDDGSUSUUNEVSUNCVDGES48D7GSDFGSEUIUEUGUESHSHRSDFH87UDFUGZR";
-            let add = "Bubu";
-            let pps = "password123";
-            let psa = "admin";
-            let sdw = "This is not the password";
-            
+        function validateLogin() {
             let u = document.getElementById('u').value;
             let p = document.getElementById('p').value;
-            if(u === psa && p === pps){
+            let correctUsername = psnnad();
+            let correctPassword = psdd();
+
+            if (u === correctUsername && p === correctPassword) {
                 document.getElementById('m').style.display = 'block';
+            } else {
+                triggerFakeChecks();
             }
         }
 
-        let pass = "user54871";
-        let token = 42;
-        let user = "otusrtd";
+        function psnnad() {
+            return "".concat("usera", "dmin");
+        }
+
+        function psdd() {
+            return atob("cGFzc3dvcmQxMjM="); // Decodes the base64 password
+        }
+
+        function MathOperations() {
+            let num1 = 123456;
+            let num2 = 789012;
+            let result = (num1 * num2) / (num2 - num1);
+            for (let i = 0; i < 100; i++) {
+                result += Math.sqrt(num1 + num2) - Math.pow(num1, 2);
+            }
+        }
+
+        function StringManipulation() {
+            let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let randomString = "";
+            for (let i = 0; i < 100; i++) {
+                randomString += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+        }
+
+        function hasssstvgsss(input) {
+            let hash = 0;
+            for (let i = 0; i < input.length; i++) {
+                let char = input.charCodeAt(i);
+                hash = (hash << 5) - hash + char;
+                hash = hash & hash; // 32bit integer
+            }
+            fakeEncryption(hash.toString());
+        }
+
+        function encryp(value) {
+            let encrypted = "";
+            for (let i = 0; i < value.length; i++) {
+                encrypted += String.fromCharCode(value.charCodeAt(i) + i % 5);
+            }
+        }
+
+        let r1 = "nuaaae1";
+        let unVar2 = 99999;
+        let unar3 = "abcdef";
+        let pass = "password123";
+        let nd1 = true;
+        let d2 = false;
+        let crray = [1, 2, 3, 4, 5, 6];
+        let ect = { a: 1, b: 2, c: 3, d: "test" };
+
+        for (let i = 0; i < 50; i++) {
+            unusedVar1 += String.fromCharCode(i);
+            unusedVar2 += i * i;
+        }
+
+        let evenMore = () => {
+            let placeholder = "This is fake!";
+            let value = Math.random() * 100000;
+            for (let i = 0; i < 10; i++) {
+                value += Math.sin(value) * i;
+                placeholder += String.fromCharCode(65 + i);
+            }
+        };
+
+        evenMoreRandomCode();
     </script>
 </body>
 </html>
-/S
