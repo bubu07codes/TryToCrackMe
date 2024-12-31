@@ -25,24 +25,41 @@
             let c2=x.map((v,i)=>String.fromCharCode(v.charCodeAt(0)-(i%3?1:-1))).join('');
             if(u===c1&&p===c2){
                 document.getElementById('m').style.display='block';
+            } else {
+                Loagic();
             }
-            r();w();z();
         }
 
-        function r(){
-            let a=Math.random()*100,b=a.toString(36).split('').reverse().join('');
-            for(let i=0;i<10;i++){Math.sqrt(a);b+=i;}
+        function Loagic(){
+            let a=Math.random()*1000;
+            for(let i=0;i<50;i++){
+                a+=Math.sin(a)*Math.random();
+            }
+            randomStrings();
+            return Math.sqrt(a);
         }
 
-        function w(){
-            let f=['z','x','y','w'],g=f.map(v=>v.charCodeAt(0)+Math.random()*10).join('');
-            let q=0;while(q<100){q+=Math.tan(q);}return g;
+        function randomStrings(){
+            let str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            let res="";
+            for(let i=0;i<20;i++){
+                res+=str[Math.floor(Math.random()*str.length)];
+            }
+            fakeMath(res);
         }
 
-        function z(){
-            let m=[1,2,3,4],n=m.reduce((a,b)=>a+b),d=n.toString(2).split('').sort().join('');
-            for(let i=0;i<5;i++){d+=Math.random();}
-            return d;
+        function Msath(input){
+            let val=input.length;
+            for(let i=0;i<10;i++){
+                val+=Math.cos(val)*Math.random();
+            }
+            return val.toString(16);
+        }
+
+        function bloatFunctions(){
+            let dummy=[...Array(100).keys()];
+            dummy=dummy.map(x=>x*2).filter(x=>x%3===0);
+            return dummy[Math.floor(Math.random()*dummy.length)];
         }
     </script>
 </body>
