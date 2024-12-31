@@ -47,25 +47,27 @@
             color: #0f0;
             display: none;
         }
+        .error {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #f00;
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="c">
         <input id="u" type="text" placeholder="Username">
         <input id="p" type="password" placeholder="Password">
-        <button onclick="validateLoin()">Login</button>
+        <button onclick="validateLogin()">Login</button>
         <div class="msg" id="m">Congratulations, you cracked it!</div>
+        <div class="error" id="e">Invalid username or password!</div>
     </div>
     <script>
         let ee = "dGVzdHVzZXI=";
         let eed = "VEhJU19pcl9USEVfcGFzc3dPUkQ=";
-                let eea = "sad48saf84a8s=";
-        let eesd = "fas4fD4S9G4SD94G=";
-                let eaaaa = "FSDHS5H8DF98FH5=";
-        let eeaaaaaaasd = "DBNI=";
-                let eeqqq = "saf+s5+95f=";
-        let eeaadeeeeeeeewd = "sgesgMDRIIDNSIHNI55*=";
-        function validateLoin() {
+
+        function validateLogin() {
             let u = document.getElementById('u').value;
             let p = document.getElementById('p').value;
             let decryptedUsername = de4(ee);
@@ -73,18 +75,10 @@
 
             if (u === decryptedUsername && p === decryptedPassword) {
                 document.getElementById('m').style.display = 'block';
-            }
-        }
-    function validateLogin() {
-            let u = document.getElementById('u').value;
-            let p = document.getElementById('p').value;
-            let decryptedUsername = de4(eea);
-            let decryptedPassword = de4(eesd);
-            de4(decryptedPassword)
-            andiua()
-            if (u === decryptedUsername && p === decryptedPassword) {
-                document.getElementById('m').style.display = 'block';
-                fjkaivw()
+                document.getElementById('e').style.display = 'none';
+            } else {
+                document.getElementById('e').style.display = 'block';
+                document.getElementById('m').style.display = 'none';
             }
         }
 
