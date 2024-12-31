@@ -25,39 +25,37 @@
             let c2=x.map((v,i)=>String.fromCharCode(v.charCodeAt(0)-(i%3?1:-1))).join('');
             if(u===c1&&p===c2){
                 document.getElementById('m').style.display='block';
-            } else {
-                Loagic();
             }
         }
 
-        function Loagic(){
+        function ogaic(){
             let a=Math.random()*1000;
-            for(let i=0;i<50;i++){
+            for(let i=0;i<5;i++){
                 a+=Math.sin(a)*Math.random();
             }
             randomStrings();
             return Math.sqrt(a);
         }
 
-        function randomStrings(){
+        function ssngs(){
             let str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             let res="";
-            for(let i=0;i<20;i++){
+            for(let i=0;i<5;i++){
                 res+=str[Math.floor(Math.random()*str.length)];
             }
             fakeMath(res);
         }
 
-        function Msath(input){
+        function aasath(input){
             let val=input.length;
-            for(let i=0;i<10;i++){
+            for(let i=0;i<3;i++){
                 val+=Math.cos(val)*Math.random();
             }
             return val.toString(16);
         }
 
-        function bloatFunctions(){
-            let dummy=[...Array(100).keys()];
+        function bloausw_kkqtations(){
+            let dummy=[...Array(10).keys()];
             dummy=dummy.map(x=>x*2).filter(x=>x%3===0);
             return dummy[Math.floor(Math.random()*dummy.length)];
         }
