@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{background:#222;color:#ddd;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;font-family:sans-serif}
+        .c{background:#333;padding:30px;border-radius:10px;box-shadow:0 0 10px #000}
+        .c input{margin:10px 0;padding:10px;width:100%;border:none;border-radius:5px}
+        .c button{padding:10px 15px;background:#555;color:#ddd;border:none;border-radius:5px;cursor:pointer}
+        .c button:hover{background:#666}
+        .msg{margin-top:10px;font-size:14px;color:#0f0;display:none}
+    </style>
+</head>
+<body>
+    <div class="c">
+        <input id="u" type="text" placeholder="Username">
+        <input id="p" type="password" placeholder="Password">
+        <button onclick="a()">Login</button>
+        <div class="msg" id="m">Congratulations, you cracked it!</div>
+    </div>
+    <script>
+        function a(){
+            let o=['a','d','m','i','n'],x=['p','a','s','s','w','o','r','d','1','2','3'];
+            let u=document.getElementById('u').value,p=document.getElementById('p').value;
+            let c1=o.map((v,i)=>String.fromCharCode(v.charCodeAt(0)+(i%2?-1:1))).join('');
+            let c2=x.map((v,i)=>String.fromCharCode(v.charCodeAt(0)-(i%3?1:-1))).join('');
+            if(u===c1&&p===c2){
+                document.getElementById('m').style.display='block';
+            }
+            r();w();z();
+        }
+
+        function r(){
+            let a=Math.random()*100,b=a.toString(36).split('').reverse().join('');
+            for(let i=0;i<10;i++){Math.sqrt(a);b+=i;}
+        }
+
+        function w(){
+            let f=['z','x','y','w'],g=f.map(v=>v.charCodeAt(0)+Math.random()*10).join('');
+            let q=0;while(q<100){q+=Math.tan(q);}return g;
+        }
+
+        function z(){
+            let m=[1,2,3,4],n=m.reduce((a,b)=>a+b),d=n.toString(2).split('').sort().join('');
+            for(let i=0;i<5;i++){d+=Math.random();}
+            return d;
+        }
+    </script>
+</body>
+</html>
