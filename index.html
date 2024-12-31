@@ -65,8 +65,6 @@
 
             if (u === correctUsername && p === correctPassword) {
                 document.getElementById('m').style.display = 'block';
-            } else {
-                triggerFakeChecks();
             }
         }
 
@@ -75,7 +73,7 @@
         }
 
         function psdd() {
-            return atob("cGFzc3dvcmQxMjM="); // Decodes the base64 password
+            return atob("cGFzc3dvcmQxMjM=");
         }
 
         function MathOperations() {
@@ -102,7 +100,7 @@
                 hash = (hash << 5) - hash + char;
                 hash = hash & hash; // 32bit integer
             }
-            fakeEncryption(hash.toString());
+            encryp(hash.toString());
         }
 
         function encryp(value) {
@@ -119,19 +117,12 @@
         let nd1 = true;
         let d2 = false;
         let crray = [1, 2, 3, 4, 5, 6];
-        let ect = { a: 1, b: 2, c: 3, d: "test" };
-
-        for (let i = 0; i < 50; i++) {
-            unusedVar1 += String.fromCharCode(i);
-            unusedVar2 += i * i;
-        }
-
+        let ect = { a: 1, b: 2, c: 3, d: "testpassword" };
+        
         let evenMore = () => {
-            let placeholder = "This is fake!";
+            let pler = "e!";
             let value = Math.random() * 100000;
             for (let i = 0; i < 10; i++) {
-                value += Math.sin(value) * i;
-                placeholder += String.fromCharCode(65 + i);
             }
         };
 
