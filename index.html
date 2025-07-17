@@ -64,16 +64,14 @@
         <div class="error" id="e">Invalid username or password!</div>
     </div>
     <script>
-        let ee = "dGVzdHVzZXI=";
-        let eed = "VEhJU19pcl9USEVfcGFzc3dPUkQ=";
-
         function validateLogin() {
             let u = document.getElementById('u').value;
             let p = document.getElementById('p').value;
-            let decryptedUsername = de4(ee);
-            let decryptedPassword = de4(eed);
+            let esq = de4(ed);
+            let usq = de4(ee);
+            let psq = de4(eed);
 
-            if (u === decryptedUsername && p === decryptedPassword) {
+            if (u === usq && p === psq) {
                 document.getElementById('m').style.display = 'block';
                 document.getElementById('e').style.display = 'none';
             } else {
@@ -128,6 +126,9 @@
             }
         }
 
+        let eed = "VEhJU19pcl9USEVfcGFzc3dPUkQ=";
+        let ed = "VjkNIbngfifmwoNiBFInOd+";
+
         function xfnwufn() {
             let val = "";
             for (let i = 0; i < 700; i++) {
@@ -155,6 +156,8 @@
                 val += String.fromCharCode(Math.random() * 126);
             }
         }
+        let ae = "AJniFsnaOJK-";
+        let ee = "dGVzdHVzZXI=";
 
         function fnaialw() {
             let val = "";
